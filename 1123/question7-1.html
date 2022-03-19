@@ -1,0 +1,28 @@
+<!--簡単な「連絡帳」アプリを作ってみましょう。-->
+
+<!--ユーザーに名前と電話番号を入力してもらい、その値をuserオブジェクトに格納します。
+そして、コンソールログにuserオブジェクトの中身を出力できれば完成です。
+（ユーザーから入力してもらうには、5章で学習したpromptメソッドを使います）　-->
+<!--名前の入力：名前を入力してください-->
+<!--電話番号の入力：電話番号を入力してください-->
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScriptの練習</title>
+</head>
+
+<body>
+  <script>
+    const user_name = prompt('名前を入力してください');
+    const user_tell = prompt('電話番号を入力してください');
+
+    const user = {
+      name: user_name,
+      tell: user_tell
+    };
+    console.log(user);
+  </script>
+</body>

@@ -1,0 +1,39 @@
+<!--次のオブジェクトと関数を作成し、関数を使ってコンソールにオブジェクトを
+出力してください。-->
+<!--- name: '山田', age: 30 をプロパティに持つオブジェクト person-->
+<!--- person オブジェクトを引数に取り、name と age をコンソールに出力する
+関数 output-->
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScriptの練習</title>
+</head>
+
+<body>
+  <script>
+  const person = {
+    name: '山田',
+    age: 30,
+    output: function(){
+      console.log(this.name,this.age);
+    }
+  };
+
+  person.output();
+  
+  //   吉﨑さん答え
+  //   const output = (obj) => {
+  //     console.log(obj.name);
+  //     console.log(obj.age);
+  //   };
+  //   const person = {
+  //     name: '山田',
+  //     age: '30',
+  //   };
+  //   output(person);
+  
+  </script>
+</body>

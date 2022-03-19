@@ -1,0 +1,35 @@
+<!--// 宿題１-->
+<!--// 次のプログラムを実行したとき、コンソールに表示されるのは-->
+<!--true と false どちらでしょう？-->
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScriptの練習</title>
+</head>
+
+<body>
+  <script>
+    const minus1 = (arg) => {
+      arg--; //はったり。returnがついてないので結果はどこにも出力されない。
+    };
+    const minus2 = (arg) => {
+      return --arg;
+    };
+    let num = 3;
+    minus1(num)
+    num = minus2(num);
+    minus1();
+    num = minus2(num);
+    num = minus2(num); //順番に計算する、ということなら０になる？ 値は更新されるということ？
+    console.log(num);
+    if (num) { // Falsy な値とは：https://developer.mozilla.org/ja/docs/Glossary/Falsy
+      console.log("true");
+    }
+    else {
+      console.log("false");　// num = 3 との比較であれば、false
+    }
+  </script>
+</body>

@@ -1,0 +1,38 @@
+<!--課題1で作成した猫（Cat）クラスに、speak()メソッドを追加してください。
+なお、このメソッドは、「【猫の名前】が「にゃーん」と鳴きました！」という
+メッセージをコンソールログに出力する処理を行います。-->
+
+<!--メソッドを追加したら、最後にそれを実行してメッセージを出力してください。-->
+
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScriptの練習</title>
+</head>
+
+<body>
+  <script>
+  class Animal {
+    constructor(name, age) {
+    this.name = name;
+    this.age = age;
+    }
+  }
+  
+  class Cat extends Animal {
+    constructor(name,age,type){
+    super(name,age);
+    this.type = type;
+    }
+    speak(){
+      console.log(this.name + 'が「にゃーん」と鳴きました！');
+    }
+  }
+  
+  const cat = new Cat('まめ','３','シャム');
+  cat.speak();
+  </script>
+</body>

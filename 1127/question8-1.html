@@ -1,0 +1,40 @@
+<!--以下の動物クラス（Animal）を継承し、新しく猫（Cat）クラスを作ってください。-->
+
+<!--class Animal {-->
+<!--  constructor(name, age) {-->
+<!--     this.name = name;-->
+<!--     this.age = age;-->
+<!--  }-->
+<!--}-->
+
+<!--ただし、猫（Cat）クラスにはtypeプロパティを追加して、値にはシャムを指定します。-->
+<!--そして、インスタンスを作ってその中身をコンソールログに出力してください。-->
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScriptの練習</title>
+</head>
+
+<body>
+  <script>
+    class Animal {
+      constructor(name, age) {
+        this.name = name;
+        this.age = age;
+      }
+    }
+    
+    class Cat extends Animal {
+      constructor(name,age,type){
+        super(name,age);
+        this.type = type;
+      }
+    }
+    
+    const cat = new Cat('name','age','シャム');
+    console.log(cat.type);
+  </script>
+</body>

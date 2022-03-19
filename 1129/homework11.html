@@ -1,0 +1,31 @@
+<!--一つ前の宿題で作った person オブジェクトの name の末尾に 'さん' をつけて返す-->
+<!--関数 appendSan を作成し、-->
+<!--関数を呼び出して person.name に 'さん' がつくことを確認してください。-->
+
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScriptの練習</title>
+</head>
+
+<body>
+  <script>
+  const person = {
+    name: '山田',
+    age: 30,
+    output: function(){
+      console.log(this.name,this.age);
+    },
+    appendSan: function(){
+      console.log(this.name + 'さん');
+    }
+  };
+  
+  person.output();
+  person.appendSan();
+  
+  </script>
+</body>

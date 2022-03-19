@@ -1,0 +1,98 @@
+<!--ゼロからフォームを作ったうえで、入力内容をすべてコンソールログに出力する
+プログラムを作ってみましょう。-->
+<!--実行ボタンをクリックすると、フォームの内容を取得してそれらがコンソールログに
+出力されるようにしてください。（実際に送信するわけではありません）-->
+
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+  <meta charset="UTF-8">
+</head>
+<!--<window>-->
+<!--  <document>-->
+<!--    <body>-->
+<!--      <form>-->
+
+<!--      </form>-->
+<!--      <button>-->
+
+<!--      </button>-->
+<!--    </body>-->
+<!--  </document>-->
+<!--</window>-->
+<script>
+  // const Window = {
+  //   document: {
+  //     getElementById: function() {
+  //       // console.log();
+  //     }
+  //     body: {
+  //       h1: {
+  //         text = "aaa";
+  //       }
+  //       button: {
+  //         id = "btn";
+  //       }
+  //     };
+  //   };
+  // };
+  // const btn = document.getElementById('btn');
+</script>
+
+<body>
+  <form name="myForm">
+    <label>名前：<input type="text" name="name" /></label>
+
+    <br>
+
+    <label>メールアドレス：<input type="email" name="email" /></label>
+
+    <br>
+
+    <label>年齢：</label>
+    <input type="radio" name="age" value="20" />20代
+    <input type="radio" name="age" value="30" />30代
+    <input type="radio" name="age" value="40" />40代
+    <input type="radio" name="age" value="50" />50代
+
+    <br><br>
+
+    <label>普段使っているスマホは？</label><br>
+    <input type="checkbox" name="phone" value="iphone" />iPhone
+    <input type="checkbox" name="phone" value="android" />Android
+    <input type="checkbox" name="phone" value="flip-phone" />ガラケー
+    <input type="checkbox" name="phone" value="other" />その他
+  </form>
+  <form name="yourform">
+
+  </form>
+
+  <br>
+
+  <button id="btn">実行</button>
+
+  <script>
+    const btn = document.getElementById('btn');
+    btn.addEventListener('click', () => {
+      const form = document.forms.myForm;
+      console.log(form.name.value);
+      console.log(form.email.value);
+      console.log(form.age.value);
+      form.phone.forEach(phone =>{
+        if(phone.checked) console.log(phone.value);
+      });
+    });
+    // const Window = {
+    //   document: {
+    //     body: {
+    //       h1: {
+    //         text = "aaa";
+    //       };
+    //     };
+    //   };
+    // };
+  </script>
+</body>
+
+</html>

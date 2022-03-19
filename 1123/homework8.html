@@ -1,0 +1,30 @@
+<!--// 宿題２-->
+<!--// 引数を2乗して返す関数 exp を定義し、3回この関数を実行してください。-->
+<!--// 関数を呼び出す前に変数 number = 2 を宣言し、-->
+<!--関数を呼び出すたびにこの変数の値が変わるようにプログラムを作ってください。-->
+<!--// 3回実行すると、 2の2乗=4、4の2乗=16、16の2乗=256という結果になります。-->
+<!--// ちなみに、2乗などを「べき乗」と呼びます。「js べき乗」と調べると-->
+<!--計算方法は見つかります。-->
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScriptの練習</title>
+</head>
+
+<body>
+  <script>
+    const exp = (num) => {
+      return num ** 2;
+    };
+    let number = 2;
+    number = exp(number); // 1回目
+    console.log(number);
+    number = exp(number); // 2回目
+    console.log(number);
+    number = exp(number); // 3回目
+    console.log(number);
+  </script>
+</body>

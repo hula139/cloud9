@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScriptの練習</title>
+</head>
+
+<body>
+  <script>
+    let doll = 108;
+    let getDollToYen = (num) => {
+      return num * doll;
+    };
+
+    while (true) {
+      let command = prompt('ドルを円に換算します');
+      if (command) {
+        console.log(getDollToYen(command) + '円です');
+      }
+      else {
+        break;
+      }
+    }
+  </script>
+</body>

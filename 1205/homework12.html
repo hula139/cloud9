@@ -1,0 +1,65 @@
+<!--具体的には、「借り　貸し」、「完済済み」、「名称[必須]」、「金額[必須]」、
+「JPY(JP)」、「説明[50文字以下]」の入力フォームを作成し、JavaScriptから
+DOM操作により値を取得し、すべてコンソールに出してみましょう。-->
+<!--教材のように「実行」ボタンがないので、ページ下部に「実行」ボタンを設置し、
+click イベントで動かしてコンソールに出すようにすると良いと思います。-->
+<!--余裕があれば、[必須]と書かれているところは入力されていなかったら 
+alert などで「名称を入力してください」などと出したり、[50文字以下]のところは
+文字数が50文字より多かったら alert を出すなど、入力された値の検証（＝バリデーション）
+を行ってください。-->
+<!--バリデーションは実務で非常に重要な処理です。-->
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>借金返済アプリ</title>
+</head>
+
+<body>
+  <form name="myForm">
+    <label>借金状況</label><br>
+    <input type="radio" name="situation" value="借り" />借り
+    <input type="radio" name="situation" value="貸し" />貸し<br>
+    <input type="checkbox" name="pay" value="完済済み" />完済済み
+
+    <br>
+    <input type="text" name="name" placeholder="名称[必須]" />
+
+    <br>
+    <input type="number" name="money" placeholder="金額[必須]" />
+
+    <br>
+    <textarea name="exp" placeholder="説明[50文字以下]" /></textarea>
+
+  </form>
+
+  <br>
+
+  <button id="btn">実行</button>
+
+  <script>
+    const btn = document.getElementById('btn');
+    btn.addEventListener('click', () => {
+      const form = document.forms.myForm;
+      console.log(form.situation.value);
+      console.log(form.pay.checked);
+      console.log(form.name.value);
+      const name = form.name.value;
+      // if (name.length > 50) { // 50文字を超えていたらアラート
+      //   alert('50文字を超えています');
+      //   return;
+      // }
+      const money = form.money.value;
+      console.log(form.money.value);
+      // if (money < 0) {
+      //   alert('金額にマイナスが入力されています');
+      //   return;
+      // }
+      console.log(form.exp.value);
+    });
+  </script>
+</body>
+
+</html>

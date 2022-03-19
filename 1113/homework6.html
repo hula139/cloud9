@@ -1,0 +1,61 @@
+<!--残りの借金を計算するプログラムを作ります。-->
+<!--現在1000円借金があるとして、入力された金額を返済すると
+残りの借金が何円か返す関数を作ってください。-->
+<!--prompt で金額を入力し、入力された金額を関数の引数に与えます。-->
+<!--関数は、"借金額 - 入力された金額"の計算結果を return で返します。-->
+<!--return の戻り値によって、「おめでとう！完済！」か
+「まだ○○円残っています。」とコンソールに表示してください。-->
+<!--もし余裕があれば、教材の関数のところの演習問題と同じく、
+繰り返し処理を使って”借金の返済が終わるまで”入力を繰り返すプログラムに
+改造してみてください。-->
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScriptの練習</title>
+</head>
+
+<body>
+  <script>
+    // let debt = 1000;
+    // let payBack = (num) => {
+    //   return debt - num;
+    // };
+
+    // while (true) {
+    //   let command = prompt('返済額を入力してください');
+    //   debt = payBack(command);
+    //   if (debt > 0) {
+    //     // command = command - command;
+    //     console.log('まだ' + debt + '円残っています。');
+    //   }
+    //   else break;
+    // }
+    // console.log('おめでとう！完済！');
+    
+    // from here
+    let debt = 1000;
+    let half = () =>{
+        return debt / 2;
+    };
+    
+    while(debt > 1){ // 0.5 > 1 = false
+      console.log(debt);
+      debt = half();
+    }
+    // to here
+
+    // function repay_debt(debt, repayment) {
+    //   return debt - repayment;
+    // }
+    // let debt = 1000;
+    // while (debt > 0) {
+    //   let repay = prompt('返済額を入力してください：')
+    //   debt = repay_debt(debt, repay);
+    //   console.log("まだ" + debt + "円残っています。");
+    // }
+    // console.log("おめでとう！完済！");
+  </script>
+</body>

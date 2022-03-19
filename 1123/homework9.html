@@ -1,0 +1,60 @@
+<!--// 宿題3（高難易度）-->
+<!--// 第一引数に数値の配列、第二引数に数字を引数として取り、
+第一引数の配列のうち第二引数の数字以上のものだけを返す関数 filter を定義し、
+以下の結果と同じになるようプログラムを作ってください。-->
+<!--let nums = filter([0, -1, 5, 6, 10], 5);-->
+<!--console.log(nums); // Array(3) と表示され、展開すると [5, 6, 10] と
+コンソールに表示される-->
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScriptの練習</title>
+</head>
+
+<body>
+  <script>
+    // kuroda original
+    // let nums = (x, y) => {
+    //   return x < y;
+    // };
+    // let result = nums([0, -1, 5, 6, 10], 5);
+    // console.log(result);
+
+    // yoshizaki
+    let filter = (x, y) => {
+      // console.log(x); // array [0, -1, 5, 6, 10]
+      // console.log(y); // 5
+      // for ver.
+      let temp = []; // 空の配列を持つ temp 変数を宣言する
+      for (let i = 0; i < x.length; i++) {
+        if (x[i] >= y) {
+          temp.push(x[i]); // 配列に x[i] を追加する(push)。逆は pop （取り出す）
+        }
+      }
+      return temp; // temp 変数を戻り値として返す
+      // filter ver.
+      // let temp = x.filter(num => num >= y);
+      // return temp;
+    };
+    let nums = [0, -1, 5, 6, 10];
+    let result = filter(nums, 5); // 5, 6, 10
+    let result2 = nums.filter(num => num >= 5);//(引数 => returnの内容)　を表している
+    
+    const myFunc = () => {
+      return 1;
+    }
+    function myFunc2() {
+      return 2;
+    }
+    // let 変数名 = 引数 => 戻り値;
+    console.log(result);
+    console.log(result2);
+    window.prompt();
+    window.alert();
+    prompt(); // window　の中にありましたよ→prompt() // error にならない
+    window.aaaaa(); // 見つからなかったよ→error
+  </script>
+</body>
