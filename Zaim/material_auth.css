@@ -1,0 +1,7 @@
+@font-face{font-family:Material-Design-Icons;src:url(https://auth.zaim.net/fonts/Material-Design-Icons.eot?-g7cqhn);src:url(https://auth.zaim.net/fonts/Material-Design-Icons.eot?#iefix-g7cqhn) format("embedded-opentype"),url(https://auth.zaim.net/fonts/Material-Design-Icons.woff?-g7cqhn) format("woff"),url(https://auth.zaim.net/fonts/Material-Design-Icons.ttf?-g7cqhn) format("truetype"),url(https://auth.zaim.net/fonts/Material-Design-Icons.svg?-g7cqhn#Material-Design-Icons) format("svg")}
+
+.error-message {
+	padding: 8px 0 0 16px;
+	font-size: 80%;
+	color: #FF755F;
+}

@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c');
+/* リセットCSS */
+body {
+  font-size: 14px;
+  color: #333;
+  background-color: white;
+  margin: 0 auto;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+  padding: 10px 0;
+  margin: 0;
+}
+
+ul,li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.inner {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.section-title {
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* ヘッダー */
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  background-color: #FFD700;
+  padding: 10px 0;
+}
+
+.title {
+  width: 100%;
+  line-height: 1px;
+  margin-left: 30px;
+}
+
+.title a {
+  text-decoration: none;
+  color: black;
+}
+
+.navbar {
+  width: 50%;
+  padding: 20px;
+}
+
+.nav-lists {
+  display: flex;
+  justify-content: space-around;
+}
+
+li {
+  list-style: none;
+}
+
+.nav-lists li a {
+  text-decoration: none;
+  color: black;
+}
+
+.contents {
+  width:90%;
+}
+
+.section-title{
+  border: 1px solid #b5aaaa;
+}
+
+/* フッター */
+footer {
+  height: 50px;
+  background-color: #f0f0f0;
+  text-align: center;
+  color: gray;
+}

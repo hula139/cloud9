@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#49c54f">
+    <title>ログイン</title>
+    <link href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet'>
+    <link rel='stylesheet' href='/css/ripples.min.css'>
+    <link rel='stylesheet' href='/css/material_auth.css'>
+    <link rel='stylesheet' href='/css/material.min.css'>
+    <link rel='stylesheet' href='/css/material_custom.css'>
+    <link rel='stylesheet' href='/css/common.css'>
+    <link rel="stylesheet" type="text/css" href="/css/login.css" />
+</head>
+
+<body>
+    <header id="header">
+        <a href="https://zaim.net/" class="header-logo">
+            <img src=" /img/common/zaim.logo.svg" alt="Zaim">
+        </a>
+        <nav id="nav" class="default">
+            <ul class="nav-text">
+                <li><a href="https://content.zaim.net/manuals">Zaim の使い方</a></li>
+                <li><a href="https://content.zaim.net/">お金の便利帳</a></li>
+            </ul>
+            <ul class="nav-btn">
+                <li><a href="https://auth.zaim.net/users/signup?from=web" class="btn btn-success">新規登録</a> </li>
+                <li><a href="https://auth.zaim.net/" class="btn btn-light">ログイン</a> </li>
+            </ul>
+            <ul class="nav-sub">
+                <li>
+                    <input type="checkbox" id="nav-sub-check" class="nav-sub-check">
+                    <label for="nav-sub-check" class="nav-sub-trigger-sp">
+                        <span></span><span></span><span></span>
+                        <div></div>
+                    </label>
+                    <ul class="nav-sub-menu">
+                        <li><a href="https://content.zaim.net/manuals">Zaim の使い方</a></li>
+                        <li><a href="https://content.zaim.net/">お金の便利帳</a></li>
+                        <li><a href="https://auth.zaim.net/users/signup?from=web">新規登録</a></li>
+                        <li><a href="https://auth.zaim.net/">ログイン</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <nav id="breadcrumb" class="only-pc-view">
+        <ul itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+            <li><a href="https://zaim.net/home" itemprop="url"><span itemprop="title">HOME</span></a></li>
+            <li><a href="https://zaim.net/user/email" itemprop="url"><span itemprop="title">アカウント設定</span></a></li>
+            <li class="active">ログイン</li>
+        </ul>
+    </nav>
+    <main class='container'>
+        <div class='row login-container'>
+            <div class="col-md-5 box">
+                <div class='box-title'>
+                    <h2><span>ログイン</span></h2>
+                </div>
+                <div class='box-inner'>
+                    <form action="/users/auth" role="form" class="form-horizontal" id="UserAuthForm" method="post" accept-charset="utf-8">
+                        <div style="display:none;"><input type="hidden" name="_method" value="POST" /><input type="hidden" name="data[_Token][key]" value="b559e1d3388639eb4495b7b6aa280573f72867248c68523d4266d5fbb1a307068f2d45d39cff973ffc505ce0bf5c0069b83ba5913df8c833636cf8cbbcc04d1a" id="Token1632172956" autocomplete="off" /></div>
+                        <div class="form-group required"><label for="UserEmail" class="col-lg-3 control-label">メールか ID</label>
+                            <div class="col-lg-9"><input name="data[User][email]" class="form-control" placeholder="登録したメールアドレス" data-mdproc="1" maxlength="128" type="text" id="UserEmail" required="required" /></div>
+                        </div>
+                        <div class="form-group"><label for="UserPassword" class="col-lg-3 control-label">パスワード</label>
+                            <div class="col-lg-9"><input name="data[User][password]" class="form-control" data-mdproc="1" placeholder="登録したパスワード" type="password" id="UserPassword" /></div>
+                        </div><input type="hidden" name="data[User][magiclink_hash]" id="UserMagiclinkHash" /><input type="hidden" name="data[User][magiclink_token]" id="UserMagiclinkToken" /><input type="hidden" name="data[User][google_id]" id="UserGoogleId" /><input type="hidden" name="data[User][google_token]" id="UserGoogleToken" /><input type="hidden" name="data[User][google_expiration_date]" id="UserGoogleExpirationDate" /><input type="hidden" name="data[User][apple_token]" id="UserAppleToken" /><input type="hidden" name="oauth_token" class="form-control" data-mdproc="1" value="U3ITGzLX4gyuN5V0aBNeFE7KXDNYDF0Js9Pv2AbMwme1EgvEsKFY5Gnumulel16p7Q" id="UserAppleToken" /><input type="hidden" name="agree" class="form-control" data-mdproc="1" value="1" id="UserAppleToken" />
+                        <p class="link-weak"><a href="/users/send_password?oauth_token=U3ITGzLX4gyuN5V0aBNeFE7KXDNYDF0Js9Pv2AbMwme1EgvEsKFY5Gnumulel16p7Q"><i class="mdi-action-lock"></i> パスワードを忘れた？</a><br /><a href="/users/signup?from=web"><i class="mdi-content-add-circle"></i> まだユーザー登録していない？</a></p>
+                        <div class="submit"><input class="btn btn-lg btn-success btn-block" type="submit" value="ログイン" /></div>
+                        <div style="display:none;"><input type="hidden" name="data[_Token][fields]" value="f22ccfa1811f0dc088236bda622a39173ae2fd93%3AUser.apple_token%7CUser.google_expiration_date%7CUser.google_id%7CUser.google_token%7CUser.magiclink_hash%7CUser.magiclink_token" id="TokenFields1525122947" autocomplete="off" /><input type="hidden" name="data[_Token][unlocked]" value="" id="TokenUnlocked1480957539" autocomplete="off" /></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script type='text/javascript' src='/js/jquery-1.11.3.min.js'></script>
+    <script type='text/javascript' src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+    <script type='text/javascript' src='/js/ripples.min.js'></script>
+    <script type='text/javascript' src='/js/material.min.js'></script>
+    <script>
+        $(function() { $.material.init(); });
+    </script>
+    <footer id='footer'>
+        <div class='footer-copyright'>
+            &copy; Zaim Inc. All Rights Reserved.
+        </div>
+    </footer>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-22738782-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-22738782-3', {
+            'user_id': ''
+        });
+    </script>
+
+</body>
+
+</html>
